@@ -1,0 +1,16 @@
+<form action="/api/update/{{feeling._id}}" method="POST">
+  Date:<br>
+  <input type="date" name="date" placeholder="Enter Number" value="{{feeling.date}}"><br>
+  Day:<br>
+  <input type="number" name="day" placeholder="Enter Number" value="{{feeling.day}}"><br>
+  FeelingsOut:<br>
+  <input type="text" name="feelingsout" placeholder="Enter Number" value="{{feeling.feelingsout}}"><br>
+  ValuesOut:<br>
+  <input type="text" name="valuesout" placeholder="Enter Value" value="{{feeling.valuesout}}"><br>
+  FeelingsIn:<br>
+  <input type="text" name="feelingsin" placeholder="Enter Text" value="{{feeling.feelingsin}}"><br>
+  ValuesIn:<br>
+  <input type="text" name="valuesin" placeholder="Enter Text" value="{{feeling.valuesin}}"><br>
+
+  <input type="submit" value="Submit">
+</form>

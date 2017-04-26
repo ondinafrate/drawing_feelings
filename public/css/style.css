@@ -1,3 +1,76 @@
-/**************/
-/* Custom CSS */
-/**************/
+body {
+  font-size: 100%;
+  font-family: 'Handlee', cursive !important;
+  background-color: #FACEB6;
+  font: #A4938F;
+  color: #254087 !important;
+  background: #FACEB6 !important;
+  /*FACEB6*/ }
+
+#divmargin {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #FACEB6;
+  font: #A4938F; }
+
+/*#FACEB6;*/
+#about {
+  font-family: 'Handlee', cursive !important;
+  color: #FACEB6 !important;
+  font-size: 30px !important;
+  font-weight: bold; }
+
+h1 {
+  font-family: 'Handlee', cursive !important;
+  font-weight: normal !important;
+  font-size: 50px !important;
+  color: #254087 !important; }
+
+h2 {
+  font-family: 'Handlee', cursive !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 32px !important;
+  color: #A4938F !important; }
+
+h3 {
+  font-family: 'Handlee', cursive !important;
+  font-size: 40px !important;
+  color: #5F5867 !important; }
+
+h6 {
+  font-family: 'Handlee', cursive !important;
+  font-size: 20px !important;
+  color: #5F5867 !important; }
+
+h5 {
+  font-family: 'Handlee', cursive !important;
+  font-size: 25px !important;
+  color: #5F5867 !important; }
+
+h4 {
+  font-family: 'Handlee', cursive !important;
+  font-size: 20px !important; }
+
+fieldset {
+  /*height: 200px;*/
+  /*border: 1px dotted #000000;*/ }
+
+legend {
+  font-family: 'Handlee', cursive !important;
+  font-size: 26px; }
+
+.nav-link {
+  font-size: 20px !important;
+  padding-left: 10px;
+  color: #254087 !important; }
+
+#listDays a {
+  font-size: 13px;
+  transition: font 0.3s ease; }
+#listDays a.active {
+  font-size: 30px; }
+#listDays a:hover {
+  font-size: 30px; }
+
+/*# sourceMappingURL=style.css.map */

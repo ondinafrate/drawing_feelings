@@ -1,0 +1,94 @@
+<html>
+
+<head>
+	<title>about</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Custom Font - Change 'Muli' to the font you want -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sumana" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+
+	<script src="//d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="container" id="nav-container">
+			<br></br>
+			<div class="row">
+				<div class="col-md-8"></div>
+				<div class="col-md-4">
+					<nav class="nav justify-content-end" role="tablist">
+						<a class="nav-link" href="/">Story</a>
+						<a class="nav-link" href="home">Days</a>
+						<a class="nav-link" href="feelings">Feelings</a>
+						<a class="nav-link" href="sketches">Sketches</a>
+						<a class="nav-link active" href="about">About</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div id="poster"></div>
+	</div>
+	<script>
+		$(function() {
+			$("#poster").load("poster.html", function() {
+				$("#worldinside").click(function() {
+					//alert("HI");
+				});
+				$('#worldinside').hover(function() {
+						$(this).children('g').children('path').each(function() {
+							$(this).attr('fill', LightenDarkenColor($(this).attr('fill'), -20));
+						})
+					},
+					function() {
+						$(this).children('g').children('path').each(function() {
+							$(this).attr('fill', LightenDarkenColor($(this).attr('fill'), 20));
+						})
+					})
+			});
+		});
+
+		function LightenDarkenColor(col, amt) {
+
+			var usePound = true;
+
+			if (col[0] == "#") {
+				col = col.slice(1);
+				usePound = true;
+			}
+
+			var num = parseInt(col, 16);
+
+			var r = (num >> 16) + amt;
+
+			if (r > 255) r = 255;
+			else if (r < 0) r = 0;
+
+			var b = ((num >> 8) & 0x00FF) + amt;
+
+			if (b > 255) b = 255;
+			else if (b < 0) b = 0;
+
+			var g = (num & 0x0000FF) + amt;
+
+			if (g > 255) g = 255;
+			else if (g < 0) g = 0;
+
+			return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+
+		}
+	</script>
+
+</body>
+<script src="libraries/tether.min.js"></script>
+<script src="libraries/bootstrap.min.js"></script>
+<script src="libraries/svg.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
