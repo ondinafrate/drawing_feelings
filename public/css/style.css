@@ -84,4 +84,7 @@ legend {
 .no-pad {
   padding: 0px; }
 
+.img-responsive {
+  cursor: zoom-in !important; }
+
 /*# sourceMappingURL=style.css.map */
