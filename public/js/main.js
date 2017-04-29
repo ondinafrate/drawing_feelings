@@ -62,10 +62,15 @@ $(function() {
 
         var element = SVG.adopt(bulb1);
         element.on('mouseover', function() {
-            element.animate().rotate(10).after(function(situation) {
-              this.animate().rotate(-10);
-            })
+          element.animate(2000, '<>').rotate(40, 642, 400).loop(4, true);
+          // element.animate().scale(0.1, 0.1);
+            // element.animate().rotate(10).after(function(situation) {
+            //   this.animate().rotate(-10);
+            // })
         });
+        // element.on('mouseout', function(){
+        //   element.animate(2000, '<>').rotate(0, 642, 400);
+        // })
     });
 });
 

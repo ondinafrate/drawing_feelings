@@ -73,4 +73,15 @@ legend {
 #listDays a:hover {
   font-size: 30px; }
 
+.fl {
+  font-family: 'Handlee', cursive !important;
+  font-size: 20px;
+  color: #254087 !important; }
+
+.fl + .no-pad {
+  margin-left: 15px; }
+
+.no-pad {
+  padding: 0px; }
+
 /*# sourceMappingURL=style.css.map */
