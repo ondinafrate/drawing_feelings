@@ -58,19 +58,35 @@ $(function() {
 
 $(function() {
     $("#c5in").load("day5in.html", function() {
+      var angle = 10;
         var bulb1 = document.getElementById('bulb1');
 
         var element = SVG.adopt(bulb1);
         element.on('mouseover', function() {
-          element.animate(2000, '<>').rotate(40, 642, 400).loop(4, true);
-          // element.animate().scale(0.1, 0.1);
-            // element.animate().rotate(10).after(function(situation) {
-            //   this.animate().rotate(-10);
-            // })
+          element.animate(1000, '>').rotate(angle, 632, 400).animate(2000, '<>').rotate(-angle, 632, 400).animate(1000, '<').rotate(0, 632, 400);
         });
-        // element.on('mouseout', function(){
-        //   element.animate(2000, '<>').rotate(0, 642, 400);
-        // })
+
+        var bulb2 = document.getElementById('bulb2');
+
+        var element2 = SVG.adopt(bulb2);
+        element2.on('mouseover', function() {
+          element2.animate(1000, '>').rotate(angle, 725, 400).animate(2000, '<>').rotate(-angle, 725, 400).animate(1000, '<').rotate(0, 725, 400);
+        });
+
+
+        var bulb3 = document.getElementById('bulb3');
+
+        var element3 = SVG.adopt(bulb3);
+        element3.on('mouseover', function() {
+          element3.animate(1000, '<>').rotate(angle, 830, 400).animate(2000, '<>').rotate(-angle, 830, 400).animate(1000, '<').rotate(0, 830, 400);
+        });
+
+        var bulb4 = document.getElementById('bulb4');
+
+        var element4 = SVG.adopt(bulb4);
+        element4.on('mouseover', function() {
+          element4.animate(1000, '<>').rotate(angle, 1012, 400).animate(2000, '<>').rotate(-angle, 1012, 400).animate(1000, '<').rotate(0, 1012, 400);
+        });
     });
 });
 
